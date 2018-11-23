@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width"> 
+<title>JS Bin</title> 
+<style> 
+table ,th,td{ 
+border:1px solid black; 
+} 
+#b1{ 
+margin-top: 20px; 
+
+margin-left:0px; 
+} 
+</style> 
+</head> 
+<body> 
+<table id="sheet" style="width:100%"> 
+<tr> 
+<th>Name</th> 
+<th>LastName</th> 
+<th>Age</th> 
+</tr> 
+<tr> 
+<td>Azizbek</td> 
+<td>Tashpulatov</td> 
+<td>20</td> 
+</table></br> 
+<label>Name</label></br> 
+<input type="text" id="name"></br> 
+<label>Lastname</label></br> 
+<input type="text" id="lastname"></br> 
+<label>Age</label></br> 
+<input type="number" id="age"></br> 
+<button onclick="addPerson();" type="button" id="b1">Add Person</button> 
+<script>
+  function addPerson(){ 
+/* 
+var row =document.createElement("tr"); 
+
+var firstName=document.getElementById("name").value; 
+var dataOne =document.createElement("td"); 
+dataOne.appendChild(firstName); 
+row.appendChild(dataOne); 
+var surName=document.getElementById("lastname").value; 
+var dataTwo =document.createElement("td"); 
+dataTwo=document.appendChild(surName); 
+row.appendChild(dataTwo); 
+var Age=document.getElementById("age").value; 
+var dataThree =document.createElement("td"); 
+dataThree=document.appendChild(Age); 
+row.appendChild(dataThree); 
+document.getElementById("sheet").appendChild(row); 
+*/ 
+var length = document.getElementById("sheet").rows.length; 
+var table = document.getElementById("sheet"); 
+var row =table.insertRow(length); 
+var dataName=row.insertCell(0); 
+var dataLastName=row.insertCell(1); 
+var dataAge=row.insertCell(2); 
+dataName.innerHTML=document.getElementById("name").value; 
+dataLastName.innerHTML=document.getElementById("lastname").value; 
+dataAge.innerHTML=document.getElementById("age").value; 
+
+}
+</script>
+</body> 
+</html>

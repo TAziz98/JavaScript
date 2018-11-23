@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width"> 
+<title>JS Bin</title> 
+</head> 
+<body> 
+<label>Type Celsius</label> 
+</br> 
+<input type="number" id="inp"></input> 
+<br></br> 
+<button type="button" name="print" onclick="temperature()">PRINT</button> 
+<label id="output"></label> 
+<script>
+  function temperature(){ 
+var input =parseInt(document.getElementById("inp").value); 
+var Fahrenheit= ((input+40)*1.8)-40; 
+document.getElementById("output").innerHTML =Fahrenheit ; 
+
+}
+</script>
+</body> 
+</html>

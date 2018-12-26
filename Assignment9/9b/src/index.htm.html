@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AssignmentA</title>
+
+</head>
+<body>  
+       <form >
+        <label>First Number</label><br/>
+        <input id="first" type="number"/><br></br>
+        <label for="Operation">Operation</label><br/>  
+        <select value='+' default='+' id="Operation">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        </select><br></br>
+        <label >Second Number</label><br/>
+        <input id="second" type="number" name="SecondNumber"/><br></br>  
+        <button type='button' name='Send' onclick="send()">send</button><br></br>
+        <label id="result"></label>
+      </form>
+      
+      <script>
+        function send(){
+          var xhttp = new XMLHttpRequest();
+       var data={
+         firstnumber:document.getElementById("first").value,
+         operation:document.getElementById("Operation").value,
+         secondnumber:document.getElementById("second").value
+      }
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("result").innerHTML ="Result: "+this.responseText;
+    }
+  };
+  xhttp.open("POST", '/num', true);
+  xhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+  xhttp.send(JSON.stringify(data));
+}
+        
+      </script>
+    
+</body>
+</html>

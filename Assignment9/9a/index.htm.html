@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AssignmentA</title>
+   
+</head>
+<body>  
+      <form action = "http://127.0.0.1:8081/calculation" method = "POST">  
+        <label>First Number</label><br/>
+        <input id="first" type="number"/><br></br>
+        <label for="Operation">Operation</label><br/>  
+        <select value='+' default='+' id="Operation">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        </select><br></br>
+        <label >Second Number</label><br/>
+        <input id="second" type="number" name="SecondNumber"/><br></br>  
+        <label id="result"></label><br></br>
+        <input type='submit' value="Click"/>
+      </form>
+     
+       
+         
+</body>
+</html>

@@ -3,7 +3,7 @@ var app = express();
 app.set('view engine', 'ejs');
 
 
-function operation(first,second,oper){
+function operation(first,second,oper) {
 var valueFirst=parseInt(first);
 var valueSecond=parseInt(second);
 if(oper==='add') return valueFirst+valueSecond;if(oper==='sub') return valueFirst-valueSecond;
